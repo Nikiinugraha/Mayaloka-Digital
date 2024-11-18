@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --base1: rgb(23, 141, 237);
+  --base2: rgb(129, 190, 255);
+  --text: white;
+  --base3: #e3e0e0;
+  --max-width: 1200px;
+  --bebasNue: "Bebas Neue", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+body {
+    font-family: var(--poppins);
+}
+
+nav .nav_header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  background-color: var(--base1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+nav .nav_header .logoMayaloka {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav_header #hamburger-icon {
+  display: flex;
+  align-items: center;
+}
+
+nav .logoMayaloka img {
+  height: 100%;
+}
+
+nav .logoMayaloka p {
+  font-size: 1.2rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+nav .logoMayaloka .desc span {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+nav #nav-menu {
+  padding: 20px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  background-color: var(--base3);
+  border-radius: 20px;
+  margin: 20px;
+  width: 90%;
+  transform: translateX(-150%);
+  transition: 200ms;
+  z-index: 9999;
+}
+
+nav #nav-menu.hidden {
+  transform: translateX(0);
+}
+
+nav #hamburger-icon {
+  color: var(--text);
+  font-size: 2rem;
+}
+
+nav .close-icon {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  font-size: 2rem;
+  color: white;
+}
+
+nav #nav-menu #menu-list {
+  list-style: none;
+  line-height: 40px;
+  width: 100%;
+}
+
+nav #nav-menu ul li a {
+  color: darkgray;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+nav #nav-menu ul li:hover a {
+  color: var(--text);
+}
+nav #nav-menu ul li:hover i {
+  color: var(--text);
+}
+
+.header-home {
+  margin: auto;
+  background: url("asset/img/bgHome.png");
+  background-size: cover;
+  height: 120vh;
+  background-repeat: no-repeat;
+  max-width: var(--max-width);
+}
+
+.header-container{
+    position: relative;
+    height: 100%;
+}
+
+.header-home .content-home-img{
+ display: flex;
+ justify-content: center;
+ height: 50%;
+}
+.header-home .content-home-img img{
+ height: 100%;
+}
+
+.header-container .information {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  height: 50%;
+}
+
+.header-container .information .title {
+  margin: 10px 0 10px 0;
+  font-size: 1.5rem;
+}
+.header-container .information .subtitle {
+  margin: 10px 0 10px 0;
+  font-size: 2rem;
+}
+.header-container .information .desc {
+  margin: 10px 0 10px 0;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+@media (width > 768px) {
+  nav {
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--base1);
+    height: 15vh;
+    box-shadow: 0 2px 8px rgba(136, 231, 247, 0.471);
+  }
+
+  nav .nav_header {
+    background-color: transparent;
+    margin-top: 15px;
+    width: 50%;
+  }
+
+  nav .nav_header .logoMayaloka .desc {
+    padding-bottom: 15px;
+  }
+
+  nav .nav_header .logoMayaloka {
+    display: flex;
+    gap: 10px;
+  }
+
+  nav .nav_header .logoMayaloka .desc span {
+    font-size: 1rem;
+    opacity: 1;
+    visibility: visible;
+    color: white;
+  }
+
+  nav #nav-menu {
+    display: flex;
+    transform: translateX(0);
+    width: fit-content;
+    background-color: transparent;
+    margin: 0;
+    position: inherit;
+  }
+
+  nav #nav-menu #menu-list {
+    display: flex;
+    gap: 20px;
+    top: 0;
+  }
+
+  nav #nav-menu ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  nav #nav-menu ul li a {
+    color: white;
+    font-size: 1.2rem;
+  }
+  nav #nav-menu ul li:hover a {
+    color: rgba(255, 255, 255, 0.585);
+  }
+
+  nav #nav-menu ul li i {
+    color: white;
+    font-size: 1.5rem;
+  }
+  nav #nav-menu ul li:hover i {
+    color: rgba(255, 255, 255, 0.485);
+    font-size: 1.5rem;
+  }
+
+  nav #hamburger-icon {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
