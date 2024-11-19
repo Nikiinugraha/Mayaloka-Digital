@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 * {
   padding: 0;
@@ -8,29 +10,34 @@
 }
 
 :root {
-  --base1: rgb(23, 141, 237);
-  --base2: rgb(129, 190, 255);
+  --base1: #3a8ab2;
   --text: white;
-  --base3: #e3e0e0;
+  --text2: #e3e0e0;
+  --base2: #2b627d;
+  --base3: white;
+  --base4: rgb(69, 185, 243);
   --max-width: 1200px;
   --bebasNue: "Bebas Neue", sans-serif;
   --poppins: "Poppins", sans-serif;
+  --redhat:  "Red Hat Display", sans-serif;
 }
 
 body {
-    font-family: var(--poppins);
+  font-family: var(--poppins);
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
 nav .nav_header {
   height: 10vh;
   display: flex;
   justify-content: space-between;
   padding-right: 20px;
-  background-color: var(--base1);
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+  background-color: #3a8ab2ba;
 }
 
 nav .nav_header .logoMayaloka {
@@ -78,6 +85,7 @@ nav #nav-menu {
 
 nav #nav-menu.hidden {
   transform: translateX(0);
+  backdrop-filter: brightness(40%);
 }
 
 nav #hamburger-icon {
@@ -106,33 +114,32 @@ nav #nav-menu ul li a {
   font-family: "Poppins", sans-serif;
 }
 nav #nav-menu ul li:hover a {
-  color: var(--text);
+  color: var(--base1);
 }
 nav #nav-menu ul li:hover i {
-  color: var(--text);
+  color: var(--base1);
 }
 
 .header-home {
   margin: auto;
-  background: url("asset/img/bgHome.png");
+  background: url("asset/img/bg-home2.png");
   background-size: cover;
   height: 120vh;
   background-repeat: no-repeat;
-  max-width: var(--max-width);
 }
 
-.header-container{
-    position: relative;
-    height: 100%;
+.header-container {
+  position: relative;
+  height: 100%;
 }
 
-.header-home .content-home-img{
- display: flex;
- justify-content: center;
- height: 50%;
+.header-home .content-home-img {
+  display: flex;
+  justify-content: center;
+  height: 50%;
 }
-.header-home .content-home-img img{
- height: 100%;
+.header-home .content-home-img img {
+  height: 100%;
 }
 
 .header-container .information {
@@ -147,92 +154,155 @@ nav #nav-menu ul li:hover i {
 .header-container .information .title {
   margin: 10px 0 10px 0;
   font-size: 1.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: #121212;
 }
 .header-container .information .subtitle {
   margin: 10px 0 10px 0;
   font-size: 2rem;
+  font-weight: 600;
+  color: whitesmoke;
 }
 .header-container .information .desc {
   margin: 10px 0 10px 0;
   font-size: 1.1rem;
   text-align: justify;
+  font-family: var(--redhat);
 }
 
-@media (width > 768px) {
-  nav {
-    z-index: 999;
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: var(--base1);
-    height: 15vh;
-    box-shadow: 0 2px 8px rgba(136, 231, 247, 0.471);
-  }
+.header-container .information .contact {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contact .contact-box {
+  width: fit-content;
+  background-color: var(--base2);
+  padding: 20px;
+  border-radius: 35px;
+  margin: 20px 0 10px 0;
+}
+.contact .contact-box:hover {
+  background-color: var(--base1);
+}
 
-  nav .nav_header {
-    background-color: transparent;
-    margin-top: 15px;
-    width: 50%;
-  }
+.contact .contact-box:hover a {
+  color: var(--text);
+}
 
-  nav .nav_header .logoMayaloka .desc {
-    padding-bottom: 15px;
-  }
+.contact-box a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text2);
+}
 
-  nav .nav_header .logoMayaloka {
-    display: flex;
-    gap: 10px;
-  }
+#service {
+  margin-top: 100px;
+}
 
-  nav .nav_header .logoMayaloka .desc span {
-    font-size: 1rem;
-    opacity: 1;
-    visibility: visible;
-    color: white;
-  }
+#service .title-service {
+  width: 100%;
+  color: var(--base1);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#service .box-service {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 2rem;
+  border-radius: 10px;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: 200ms;
+}
+#service .box-service:hover {
+    background-color: var(--base1) ;
+}
+#service .box-service:hover .title-box-service h1, #service .box-service:hover .title-box-service p{
+color: var(--text);
+}
+#service .box-service .title-box-service h1{
+font-size: 1.2rem;
+}
+#service .box-service .title-box-service p{
+font-size: 0.8rem;
+}
+#service .box-service i {
+color: #121212;
+ font-size: 5rem;
+}
+#service .box-service:hover i {
+color: white;
+ font-size: 5rem;
+}
 
-  nav #nav-menu {
-    display: flex;
-    transform: translateX(0);
-    width: fit-content;
-    background-color: transparent;
-    margin: 0;
-    position: inherit;
-  }
+.box-service .learn-more{
+    background-color: var(--base4);
+    padding: 8px 10px 8px 10px;
+}
+.box-service .learn-more a{
+   color: white;
+   text-decoration: none;
+}
 
-  nav #nav-menu #menu-list {
-    display: flex;
-    gap: 20px;
-    top: 0;
-  }
+#tentang-kami{
+  padding: 50px 20px;
+}
 
-  nav #nav-menu ul li {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  nav #nav-menu ul li a {
-    color: white;
-    font-size: 1.2rem;
-  }
-  nav #nav-menu ul li:hover a {
-    color: rgba(255, 255, 255, 0.585);
-  }
+#tentang-kami .about-us-title{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: var(--base2);
+  font-size: 1.5rem;
+}
+#tentang-kami .about-us-title i{
+  font-size: 2rem;
+}
 
-  nav #nav-menu ul li i {
-    color: white;
-    font-size: 1.5rem;
-  }
-  nav #nav-menu ul li:hover i {
-    color: rgba(255, 255, 255, 0.485);
-    font-size: 1.5rem;
-  }
+#tentang-kami .konten-about-us-logo{
+  margin: 30px 0 30px 0;
+  background-color:black;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+}
+#tentang-kami .konten-about-us-logo img{
+  background-color:black;
+  width: 100%;
+}
 
-  nav #hamburger-icon {
-    opacity: 0;
-    visibility: hidden;
-  }
+#tentang-kami .desc{
+  text-align: justify;
+}
+
+#tentang-kami .konten-about-us-selengkapnya{
+  margin: 30px 0 30px 0;
+  padding: 15px 10px 15px 10px;
+  width: fit-content;
+  background-color: transparent;
+  border: 1px solid  #3a8ab2;
+  box-shadow: 0 2px 8px rgba(103, 187, 215, 0.3);
+  transition: 200ms;
+}
+#tentang-kami .konten-about-us-selengkapnya:hover{
+  background-color: var(--base1);
+  box-shadow: 0 2px 8px rgba(246, 245, 245, 0.721);
+}
+#tentang-kami .konten-about-us-selengkapnya span{
+  font-size: 1.2rem;
+  color: var(--base1);
+}
+#tentang-kami .konten-about-us-selengkapnya:hover span{
+  font-size: 1.2rem;
+  color: var(--text);
 }
