@@ -37,7 +37,7 @@ nav .nav_header {
   display: flex;
   justify-content: space-between;
   padding-right: 20px;
-  background-color: #3a8ab2ba;
+  background-color: #3a8ab2;
 }
 
 nav .nav_header .logoMayaloka {
@@ -131,15 +131,15 @@ nav #nav-menu ul li:hover i {
 .header-container {
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
-.header-home .content-home-img {
-  display: flex;
-  justify-content: center;
-  height: 50%;
+.header-home .header-container .content-home-img {
+  width: 100%;
 }
 .header-home .content-home-img img {
-  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .header-container .information {
