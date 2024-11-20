@@ -104,12 +104,12 @@
   }
  
   .header-container .content-home-img {
-    width: 45%;
-    height: fit-content;
+    width: 100%;
   }
   .header-container .content-home-img img{
     width: 100%;
     object-fit: cover;
+
   }
   .header-container .information {
     top: 7%;
@@ -158,4 +158,99 @@
  #service .box-service{
     width: 50%;
  }
+
+ #tentang-kami .about-us-title{
+  margin: 80px 0 50px 0;
+ }
+ #tentang-kami .konten-container{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+ }
+ #tentang-kami .konten-container .partners{
+  text-align: center;
+ }
+ #tentang-kami .konten-container .partners span{
+  line-height: 3em;
+ }
+ #tentang-kami .konten-about-us-logo {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 50vh;
+  padding: 40px;
+}
+
+#tentang-kami .konten-about-us-logo img {
+  background-color: black;
+  width: 100%;
+}
+
+#portofolio .portofolio-title{
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  margin: 80px 0 30px 0;
+}
+#portofolio .portofolio-title i{
+  font-size: 3rem;
+}
+
+#portofolio .portofolio-container{
+  display: flex;
+}
+
+#our-video{
+  padding: 50px;
+}
+
+#our-video .our-video-title{
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+}
+
+#our-video .video{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 40px 0 0 0;
+}
+
+footer{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+footer .logo-container .logoFooter{
+  width: 500px;
+}
+footer .logo-container .logoFooter img{
+  width: 100%;
+  object-fit: contain;
+}
+
+footer .information{
+  line-height: 2.5em;
+  font-family: var(--redhat);
+  width: 500px;
+}
+
+footer .information .name, footer .information .alamat, footer .information .email, footer .information .contact1, footer .information .contact2{
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+form{
+   width: 400px;
+}
+
+form .form-control{
+  width: 100%;
+}
 }
