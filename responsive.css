@@ -223,21 +223,21 @@ footer{
   padding: 20px;
 }
 
-footer .logo-container .logoFooter{
+footer .footer-container .logo-container .logoFooter{
   width: 500px;
 }
-footer .logo-container .logoFooter img{
+footer .footer-container .logo-container .logoFooter img{
   width: 100%;
   object-fit: contain;
 }
 
-footer .information{
+footer .footer-container .information{
   line-height: 2.5em;
   font-family: var(--redhat);
   width: 500px;
 }
 
-footer .information .name, footer .information .alamat, footer .information .email, footer .information .contact1, footer .information .contact2{
+footer .footer-container .information .name, footer .footer-container .information .alamat, footer .footer-container .information .email, footer .footer-container .information .contact1, footer .footer-container .information .contact2{
   font-size: 1.2rem;
   color: white;
   display: flex;
@@ -252,5 +252,19 @@ form{
 
 form .form-control{
   width: 100%;
+}
+
+footer{
+  display: block;
+}
+footer .footer-container{
+  display: flex;
+}
+footer .maps{
+  margin-top: 20px;
+  padding: 0;
+}
+footer .maps iframe{
+border-radius: 20px;
 }
 }

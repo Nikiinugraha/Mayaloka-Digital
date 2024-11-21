@@ -6,5 +6,5 @@ hamburger_icon.addEventListener("click", () => {
     menuList.classList.toggle("hidden");
 
     const isOpen = menuList.classList.contains("hidden");
-    menuBtnIcon.setAttribute("class", isOpen ? "ph ph-x" : "ph ph-list")
+    menuBtnIcon.setAttribute("class", isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars")
 });

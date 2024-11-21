@@ -129,15 +129,18 @@ nav #nav-menu ul li:hover i {
 }
 
 .header-container {
-  position: relative;
   height: 100%;
   width: 100%;
 }
+.logo-container{
+  display: flex;
+  justify-content: center;
+}
 
-.header-home .header-container .content-home-img {
+.header-home .header-container .logo-container .content-home-img {
   width: 70vw;
 }
-.header-home .content-home-img img {
+.header-home .logo-container .content-home-img img {
   width: 100%;
   object-fit: cover;
 }
@@ -258,14 +261,21 @@ nav #nav-menu ul li:hover i {
   color: white;
   transition: 0.5s;
 }
-#service .box-service i {
+#service .box-service #rocket,
+#service .box-service #calendar,
+#service .box-service #cloud,
+#service .box-service #monitor,
+#service .box-service #search {
   color: white;
   font-size: 5rem;
   transition: 0.8s;
 }
-#service .box-service:hover i {
-  color: black;
-  font-size: 5rem;
+#service .box-service:hover #rocket, 
+#service .box-service:hover #calendar,
+#service .box-service:hover #cloud,
+#service .box-service:hover #monitor,
+#service .box-service:hover #search {
+  color: var(--base1);
 }
 
 .box-service .learn-more {
@@ -276,6 +286,11 @@ nav #nav-menu ul li:hover i {
   color: white;
   text-decoration: none;
 }
+.box-service .learn-more i {
+  color: white;
+  font-size: 1.2rem;
+}
+
 
 #tentang-kami {
   padding: 50px 20px;
@@ -303,6 +318,7 @@ nav #nav-menu ul li:hover i {
   display: flex;
   align-items: center;
  background-color: black;
+ border-radius: 20px;
 }
 
 #tentang-kami .konten-about-us-logo img {
@@ -335,6 +351,10 @@ nav #nav-menu ul li:hover i {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  gap: 10px;
+}
+#tentang-kami .konten-about-us-selengkapnya i{
+ color: white;
 }
 #tentang-kami .konten-about-us-selengkapnya::before {
   content: "";
@@ -360,7 +380,7 @@ nav #nav-menu ul li:hover i {
 }
 #tentang-kami .konten-about-us-selengkapnya:hover span {
   font-size: 1.2rem;
-  color: black;
+  color: white;
 }
 
 #portofolio .portofolio-title{
@@ -402,8 +422,16 @@ nav #nav-menu ul li:hover i {
   padding: 0 0 50px 0;
 }
 #our-video .our-video-title{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin: 50px 0 30px 0;
+}
+#our-video .our-video-title i{
+  font-size: 2rem;
+  color: red;
 }
 
 #our-video .video{
@@ -491,4 +519,17 @@ footer .send-btn button{
 footer .send-btn button:hover{
   background-color: #28556b;
 }
+
+footer .maps{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+footer .maps iframe{
+  width: 100%;
+  object-fit: cover;
+}
+
 

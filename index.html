@@ -6,8 +6,14 @@
     <title>Mayaloka Digital</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <nav>
@@ -20,7 +26,7 @@
           </div>
         </div>
         <div id="hamburger-icon">
-          <i class="ph ph-list"></i>
+          <i class="fa-solid fa-bars"></i>
         </div>
       </div>
 
@@ -48,8 +54,10 @@
 
     <header id="home" class="header-home">
       <div class="header-container">
-        <div class="content-home-img">
-          <img src="asset/img/kontenHome.png" />
+        <div class="logo-container">
+          <div class="content-home-img">
+            <img src="asset/img/kontenHome.png" />
+          </div>
         </div>
         <div class="information">
           <div class="title">
@@ -58,14 +66,14 @@
           <div class="subtitle">
             <span>Web Design & Digital Marketing</span>
           </div>
-          <div class="desc">
+          <div class="desc" data-aos="fade-up">
             <p>
               Mayaloka digital yang merupakan brand dari PT. Global Mertasari Digital adalah penyedia layanan Jasa Web Design dan Digital Marketing untuk berbagai jenis bisnis, terbaik di Indonesia. Beralamat di Jalan Raya Sesetan No 235,
               Denpasar.
             </p>
           </div>
           <div class="contact">
-            <div class="contact-box">
+            <div class="contact-box" data-aos="fade-right">
               <a href="https://wa.me/+62819-3607-8543"><span>Hubungi Kami</span></a>
             </div>
           </div>
@@ -75,60 +83,65 @@
 
     <section id="service">
       <div class="title-service">
-        <i class="ph ph-gear-six"></i>
+        <i class="fa-solid fa-gears"></i>
         <h1>Service</h1>
       </div>
       <div class="box-service-container">
-        <div class="box-service">
-          <i class="ph ph-rocket-launch"></i>
+        <div class="box-service" data-aos="fade-right">
+          <i class="fa-solid fa-rocket" id="rocket"></i>
           <div class="title-box-service">
             <h1>Social Media Engagement</h1>
             <p>Meningkatkan interaksi dan kepercayaan terhadap suatu brand/merk secara digital di social media</p>
           </div>
           <div class="learn-more">
             <a><span>Learn More</span></a>
+            <i class="fa-solid fa-minimize"></i>
           </div>
         </div>
-        <div class="box-service">
-          <i class="ph ph-calendar-blank"></i>
+        <div class="box-service" data-aos="fade-up">
+          <i class="fa-solid fa-calendar" id="calendar"></i>
           <div class="title-box-service">
             <h1>Digital Campaign</h1>
             <p>Pembuatan dan manajemen strategi iklan digital meliputi social media ads dan search engine marketing (SEM).</p>
           </div>
           <div class="learn-more">
             <a><span>Learn More</span></a>
+            <i class="fa-solid fa-minimize"></i>
           </div>
         </div>
-        <div class="box-service">
-          <i class="ph ph-soundcloud-logo"></i>
+        <div class="box-service" data-aos="fade-left">
+          <i class="fa-solid fa-cloud" id="cloud"></i>
           <div class="title-box-service">
             <h1>Social Media Management</h1>
             <p>Pengelolaan akun Social media menggunakan data-driven strategy.</p>
           </div>
           <div class="learn-more">
             <a><span>Learn More</span></a>
+            <i class="fa-solid fa-minimize"></i>
           </div>
         </div>
       </div>
       <div class="box-service-container">
-        <div class="box-service">
-          <i class="ph ph-monitor"></i>
+        <div class="box-service" data-aos="fade-right">
+          <i class="fa-solid fa-tv" id="monitor"></i>
           <div class="title-box-service">
             <h1>Website Development</h1>
             <p>Pelayanan pembuatan website baru maupun redesign website lama dengan teknologi serta desain terbaru.</p>
           </div>
           <div class="learn-more">
             <a><span>Learn More</span></a>
+            <i class="fa-solid fa-minimize"></i>
           </div>
         </div>
-        <div class="box-service">
-          <i class="ph ph-magnifying-glass"></i>
+        <div class="box-service" data-aos="fade-left">
+          <i class="fa-brands fa-searchengin" id="search"></i>
           <div class="title-box-service">
             <h1>Search Engine Optimization</h1>
             <p>Optimasi website untuk meningkatkan traffic organik sebuah website di Search Engine.</p>
           </div>
           <div class="learn-more">
             <a><span>Learn More</span></a>
+            <i class="fa-solid fa-minimize"></i>
           </div>
         </div>
       </div>
@@ -136,7 +149,7 @@
 
     <section id="tentang-kami">
       <div class="about-us-title">
-        <i class="ph ph-users-three"></i>
+        <i class="fa-solid fa-users-line"></i>
         <h1>Tentang Kami</h1>
       </div>
       <div class="konten-container">
@@ -162,13 +175,14 @@
       </div>
       <div class="konten-about-us-selengkapnya">
         <span>Learn More</span>
+        <i class="fa-solid fa-chevron-right"></i>
       </div>
     </section>
 
     <section id="portofolio">
       <div class="portofolio-title">
         <i class="ph ph-newspaper-clipping"></i>
-        <h1>Portofolio Mayaloka Digital</h1>
+        <h1>Our Project</h1>
       </div>
       <div class="portofolio-container">
         <div class="porto-box">
@@ -234,7 +248,8 @@
 
     <section id="our-video">
       <div class="our-video-title">
-        <h1>Our Promotion</h1>
+        <i class="fa-regular fa-square-caret-right"></i>
+        <h1>Let's Check This Video</h1>
       </div>
       <div class="video">
         <iframe
@@ -251,49 +266,64 @@
     </section>
 
     <footer>
-      <div class="logo-container">
-        <div class="logoFooter">
-          <img src="asset/img/New-Logo-Mayaloka-600x137.png" />
+      <div class="footer-container">
+        <div class="logo-container">
+          <div class="logoFooter">
+            <img src="asset/img/New-Logo-Mayaloka-600x137.png" />
+          </div>
         </div>
+        <div class="information">
+          <div class="name">
+            <i class="ph ph-buildings"></i>
+            <span>PT Global Mertasari Digital</span>
+          </div>
+          <div class="alamat">
+            <i class="ph ph-key-return"></i>
+            <span>Jl. Raya Sesetan No.235, Bali 80225</span>
+          </div>
+          <div class="email">
+            <i class="ph ph-envelope-simple"></i>
+            <span>@mayaloka.com</span>
+          </div>
+          <div class="contact1">
+            <i class="ph ph-phone"></i>
+            <span>Admin 1 : 081222998876</span>
+          </div>
+          <div class="contact2">
+            <i class="ph ph-phone"></i>
+            <span>Admin 2 : 08819336314</span>
+          </div>
+        </div>
+        <form>
+          <div class="form-control">
+            <input type="text" id="nama" placeholder="Nama" />
+          </div>
+          <div class="form-control">
+            <input type="text" id="nama" placeholder="Email" />
+          </div>
+          <div class="form-control">
+            <textarea name="komentar" id="komentar" placeholder="Message"></textarea>
+          </div>
+          <div class="send-btn">
+            <button type="submit" value="submit">Send</button>
+          </div>
+        </form>
       </div>
-      <div class="information">
-        <div class="name">
-          <i class="ph ph-buildings"></i>
-          <span>PT Global Mertasari Digital</span>
+        <div class="maps">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.1510148736274!2d115.21971669999998!3d-8.701737899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd241994e6bf9a3%3A0x67771ade9d2bae4a!2sMayaloka%20Digital!5e0!3m2!1sid!2sid!4v1732192734244!5m2!1sid!2sid"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-        <div class="alamat">
-          <i class="ph ph-key-return"></i>
-          <span>Jl. Raya Sesetan No.235, Bali 80225</span>
-        </div>
-        <div class="email">
-          <i class="ph ph-envelope-simple"></i>
-          <span>@mayaloka.com</span>
-        </div>
-        <div class="contact1">
-          <i class="ph ph-phone"></i>
-          <span>Admin 1 : 081222998876</span>
-        </div>
-        <div class="contact2">
-          <i class="ph ph-phone"></i>
-          <span>Admin 2 : 08819336314</span>
-        </div>
-      </div>
-      <form>
-        <div class="form-control">
-          <input type="text" id="nama" placeholder="Nama" />
-        </div>
-        <div class="form-control">
-          <input type="text" id="nama" placeholder="Email" />
-        </div>
-        <div class="form-control">
-          <textarea name="komentar" id="komentar" placeholder="Message"></textarea>
-        </div>
-       <div class="send-btn">
-        <button type="submit" value="submit">Send</button>
-      </div>
-      </form>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
